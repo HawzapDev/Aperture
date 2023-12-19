@@ -52,9 +52,6 @@ header {
     margin-right: 32px;
 }
 
-.links ul li:first-child {
-}
-
 .links ul li:last-child {
     margin-right: 0px;
 }
