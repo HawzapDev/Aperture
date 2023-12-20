@@ -222,10 +222,15 @@ header {
     position: relative;
 }
 
-.item img,
 .item {
     width: 578px;
-    height: 600px;
+    height: 100%;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .works div:nth-child(1),
@@ -240,7 +245,7 @@ header {
 
 .about__item {
     position: absolute;
-    width: 501px;
+    max-width: 501px;
     bottom: 11px;
     left: 30px;
     font-size: 14px;
@@ -435,6 +440,7 @@ footer {
 
 .footer_top {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 35px;
 }
@@ -478,6 +484,7 @@ footer {
 
 .footer__mid {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 36px 0 36px 0;
@@ -535,11 +542,11 @@ footer {
 }
 
 @media (max-width: 1289px) {
-    .header__wrapper {
-        max-width: 1120px;
+    header {
+        padding: 0 50px;
     }
-    .footer__wrapper {
-        max-width: 1084px;
+    footer {
+        padding: 100px 70px;
     }
     .footer__logo p {
         width: 313px;
@@ -551,7 +558,8 @@ footer {
 
 @media (max-width: 1170px) {
     .works {
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
     .item {
         margin-right: 0;
@@ -582,6 +590,27 @@ footer {
     }
 }
 
+@media (max-width: 925px) {
+    .clients__wrapper {
+        max-width: 740px;
+    }
+}
+
+@media (max-width: 843px) {
+    .footer__logo {
+        margin-bottom: 27px;
+    }
+    .subscribe {
+        margin-bottom: 26px;
+    }
+}
+
+@media (max-width: 852px) {
+    .footer__info {
+        margin-right: 0;
+    }
+}
+
 @media (max-width: 809px) {
     .tools {
         flex-direction: column;
@@ -602,12 +631,18 @@ footer {
     .text {
         font-size: 16px;
     }
+    .slogan,
+    .text,
+    .title__tools {
+        text-align: center;
+    }
+    .tools__desc .button {
+        margin: 0 auto;
+        margin-top: 25px;
+    }
 }
 
-@media (max-width: 803px) {
-    .header__wrapper {
-        max-width: 650px;
-    }
+@media (max-width: 907px) {
     .burger-button {
         display: block;
     }
@@ -622,7 +657,7 @@ footer {
         background: white;
         width: 244px;
         border-radius: 15px;
-        left: -43px;
+        right: 0;
         transition: 0.4s ease-out;
     }
     .links .activeUl {
@@ -647,5 +682,107 @@ footer {
     }
     .links ul li .links__line {
         background-color: black;
+    }
+    .title {
+        margin-bottom: 100px;
+    }
+}
+@media (max-width: 706px) {
+    .clients__wrapper {
+        max-width: 480px;
+    }
+    .clients__icons {
+        align-items: flex-start;
+    }
+    .item {
+        width: 82%;
+    }
+}
+
+@media (max-width: 578px) {
+    .title {
+        width: 406px;
+    }
+}
+
+@media (max-width: 465px) {
+    header {
+        padding: 0 30px;
+    }
+    .header__wrapper img {
+        width: 110px;
+    }
+    .links p:first-child {
+        font-size: 12px;
+        margin-right: 16px;
+    }
+    .about__item {
+        left: 14px;
+    }
+    .about__item p {
+        font-size: 12px;
+    }
+    .info {
+        margin-right: 17px;
+    }
+    .tools__desc {
+        width: 368px;
+    }
+    .slogan {
+        font-size: 19px;
+    }
+    .title__tools {
+        font-size: 25px;
+    }
+    .text {
+        font-size: 14px;
+    }
+    .title__leafs,
+    .title__starfall,
+    .sunset {
+        width: 310px;
+        margin-right: 0;
+    }
+
+    .title__leafs h2,
+    .title__starfall h2,
+    .mountain h2 {
+        font-size: 29px;
+        line-height: 37px;
+        margin-bottom: 15px;
+    }
+
+    .mountain p,
+    .leafs p,
+    .starfall p {
+        font-size: 18px;
+    }
+    .clients__wrapper {
+        max-width: 395px;
+    }
+    .get__help--wrapper {
+        width: 390px;
+    }
+    .get__help--wrapper h2 {
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 419px) {
+    .title {
+        width: 320px;
+    }
+    .title h1 {
+        font-size: 27px;
+        margin-bottom: 5px;
+    }
+    .subTitle {
+        font-size: 13px;
+    }
+    .footer__end {
+        display: block;
+    }
+    .footer__end p {
+        margin-bottom: 13px;
     }
 }
