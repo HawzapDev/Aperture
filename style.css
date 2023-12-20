@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+.favicon {
+    border-radius: 50%;
+}
+
 body {
     background-color: black;
 }
@@ -602,6 +606,9 @@ footer {
     }
     .subscribe {
         margin-bottom: 26px;
+    }
+    .footer__mid input {
+        width: 68%;
     }
 }
 
